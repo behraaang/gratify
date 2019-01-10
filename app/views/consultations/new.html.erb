@@ -1,0 +1,38 @@
+<div class="container" style="margin-top: 200px; margin-bottom:200px">
+  <%= form_for '' do |f| %>
+     <div class="row">
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <%= f.text_field :name, class:'' %>
+         <label for="name"><%= t('cname') %></label>
+       </div>
+       <div class="input-field col s6">
+         <%= f.select :field, options_for_select(Consultation::FIELDS.map {|f| [t(f[0]), f[1]] } ), class:'' %>
+         <label for="field"><%= t('field') %></label>
+       </div>
+     </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <%= f.email_field :email, class: 'validate' %>
+          <label for="email"><%= t('cemail') %></label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+
+          <%= f.text_field :phone, class:'number' %>
+          <label for="phone"><%= t('cphone') %></label>
+        </div>
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">mode_edit</i>
+
+        <%= f.text_area :description, class:'materialize-textarea ' %>
+        <label for="description"><%= t('desc') %></label>
+      </div>
+      <h5>
+        <%= t('consult_desc') %>
+      </h5>
+      <%= f.submit t('csubmit'), class: 'btn waves-effect waves-light' %>
+  <% end %>
+</div>

@@ -1,0 +1,46 @@
+// Place all the styles related to the visitors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//= require material_icons
+
+@font-face {
+  font-family: Neirizi;
+  src: asset_url('Neirizii.ttf');
+}
+
+@import "materialize/components/color";
+
+$primary-color: color("blue-grey", "darken-1") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: color("red", "darken-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+
+@import "materialize";
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+header, main, footer {
+  padding-left: 300px
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+
+.parallax-container {
+  height: 400px;
+}
+

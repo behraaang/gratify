@@ -1,0 +1,78 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  name: "Behrang Mirzamani"
+  slogan:         If you can make one thing, you can make anything
+  blog: Blog
+  about: About
+  more: Little More
+  projects: Projects
+  call: Call Me
+  contact: Contact Me
+  consult: Consult Me
+  consult_desc: " I really enjoy being the goto person for solving problems & participating in team activities,
+                         If you have any idea about doing something new or reviewing the way things are done,
+                         I'll be more than glad to be any kind of help. Your ideas would be 100% safe and I'll try to
+                         help you even for a guidance consultant."
+  cname: Name
+  cemail: Email
+  cphone: Phone
+  field: Field
+  desc: Description
+  csubmit: Consult Me
+  life: Life
+  programming: Programming
+  soccer: Soccer
+  other: Other
+  interest: Some areas of interest
+  c_p: Product & Customer Development Knowledge, Self Organized
+  ror: Ruby on Rails
+  eop: Elixir on Phoenix
+  dev: Web Application Development
+  bak: Backend API Developer
+  brief: "An ambitious problem solver with a passion for online businesses. As someone who takes responsibility for his own personal development, I continually evaluate and upgrade my skills so that I stay near the cutting edge of web development. Developing and maintaining the server side solutions for problems and needs. Participating in discussions with clients to clarify what they want. I thought there should be a place to share my experiences and here it goes.."
+  c_p_desc: Able to organise own workload effectively and prioritise tasks.Strongly committed to all projects from inception right through to the end.
+  skills: Solid knowledge of RoR, Phoenix, HTML, CSS, XML and JavaScript/jQuery.
+  dev_desc: Awareness of the Web Development industry, and new technologies. Tendency to looking for the best solution while focusing the problem.
+  bak_desc: Has experience of developing mobile applications, serving as server-side backend. Knowledge of international web standards and protocols.
+  Technology: Technology
+  Education: Education
+  f_desc:           There would be not enough time to live in this wonderful life even if you had all time, how can that be reasonable for anyone responsible for creating it
+  f_head: I hope this gets updated
+  links: Links
+  copyright:       © 2018 Copyright Gratifying Development
+  g_life: Gratifying Life
+  g_dev: Gratifying Dev
+  g_sport: Gratifying Sport Life
+  g_other: Be Gratifying
+  read_more: Read More

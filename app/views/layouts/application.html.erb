@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Gratifying Development | GratiDev - Experience Something New</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <%= favicon_link_tag image_path('favicon.ico'), :rel => 'icon', :type =>  'image/x-icon' %>
+
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag 'visitors', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<%= render 'application/styles' %>
+<%= render 'application/side' %>
+<main>
+  <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons black-text" style="font-size:50px">menu</i></a>
+  <%= yield %>
+</main>
+<%= render 'application/footer' %>
+
+</body>
+
+</html>

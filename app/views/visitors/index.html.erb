@@ -1,0 +1,169 @@
+<!--<a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>-->
+<div class="container">
+  <div class="row" style="margin:50px 0 100px">
+    <div class="col s12 m12 l10">
+      <!--<h4 class="header ">-->
+        <!--<%= t('interest') %>-->
+      <!--</h4>-->
+      <div id="life" class="section scrollspy card hoverable ">
+        <div class="card-image">
+          <%= image_tag '1.jpg' %>
+          <span class="card-title black-text hoverable card center" style="width:190px;padding:5px"><%= t('life') %></span>
+        </div>
+        <div class="card-content">
+          <h5>
+            <%= I18n.locale == :fa ? @life.fa_title : @life.title %>
+          </h5>
+          <p>
+            <div>
+              <%= truncate(I18n.locale == :fa ? @life.fa_content : @life.content, length: 250) %>
+                <%= link_to t('read_more'), '', class: "read-more-life" %>
+                <script>
+                    $('.read-more-life').on('click', function(e) {
+                        e.preventDefault();
+                        $(this).parent().html('<%= escape_javascript I18n.locale == :fa ? @life.fa_content : @life.content %>')
+                    })
+                </script>
+            </div>
+          </p>
+        </div>
+        <div class="card-action">
+          <%= link_to t('g_life'), controller: 'posts', action: 'index', category: 'life' %>
+        </div>
+      </div>
+      <div id="programming" class="section scrollspy card hoverable ">
+        <div class="card-image">
+          <img src="<%= image_path 'programming.gif' %>">
+          <span class="card-title black-text hoverable card center" style="width:190px;padding:5px"><%= t('programming') %></span>
+        </div>
+        <div class="card-content">
+          <h5>
+            <%= I18n.locale == :fa ? @programming.fa_title : @programming.title %>
+          </h5>
+          <p>
+            <%= truncate(I18n.locale == :fa ? @programming.fa_content : @programming.content, length: 250) %>
+            <%= link_to t('read_more'), '', class: "read-more-programming" %>
+          </p>
+          <script>
+              $('.read-more-programming').on('click', function(e) {
+                  e.preventDefault();
+                  $(this).parent().html('<%= escape_javascript I18n.locale == :fa ? @programming.fa_content : @programming.content %>')
+              })
+          </script>
+        </div>
+        <div class="card-action">
+          <%= link_to t('g_dev'), controller: 'posts', action: 'index', category: 'programming' %>
+        </div>
+      </div>
+      <div id="soccer" class="section scrollspy card hoverable ">
+        <div class="card-image">
+          <img src="<%= image_path 'messi.jpg' %>">
+          <span class="card-title black-text hoverable card center" style="width:190px;padding:5px"><%= t('soccer') %></span>
+        </div>
+
+        <div class="card-content">
+          <h5>
+            <%= I18n.locale == :fa ? @soccer.fa_title : @soccer.title %>
+          </h5>
+          <p>
+            <%= truncate(I18n.locale == :fa ? @soccer.fa_content : @soccer.content, length: 250) %>
+
+            <%= link_to t('read_more'), '', class: "read-more-soccer" %>
+          </p>
+
+          <script>
+              $('.read-more-soccer').on('click', function(e) {
+                  e.preventDefault();
+                  $(this).parent().html('<%= escape_javascript I18n.locale == :fa ? @soccer.fa_content : @soccer.content %>')
+              })
+          </script>
+        </div>
+        <div class="card-action">
+          <%= link_to t('g_sport'), controller: 'posts', action: 'index', category: 'soccer' %>
+
+        </div>
+      </div>
+      <div id="esports" class="section scrollspy card hoverable ">
+        <div class="card-image">
+          <img src="<%= image_path 'cs.png' %>">
+          <span class="card-title black-text hoverable card center" style="width:190px;padding:5px"><%= t('other') %></span>
+        </div>
+        <div class="card-content">
+          <h5>
+            <%= I18n.locale == :fa ? @other.fa_title : @other.title %>
+          </h5>
+          <p>
+            <%= truncate(I18n.locale == :fa ? @other.fa_content : @other.content, length: 250) %>
+
+            <%= link_to t('read_more'), '', class: "read-more-other" %>
+
+          <script>
+              $('.read-more-other').on('click', function(e) {
+                  e.preventDefault();
+                  $(this).parent().html('<%= escape_javascript I18n.locale == :fa ? @other.fa_content : @other.content %>')
+              })
+          </script>
+          </p>
+        </div>
+        <div class="card-action">
+          <%= link_to t('g_other'), controller: 'posts', action: 'index', category: 'other' %>
+        </div>
+      </div>
+    </div>
+    <div class="col hide-on-med-and-down m3 l2">
+      <div class="toc-wrapper pinned" style="top: 30px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#life"><%= t('life') %></a></li>
+            <li><a href="#programming"><%= t('programming') %></a></li>
+            <li><a href="#soccer"><%= t('soccer') %></a></li>
+            <li><a href="#esports"><%= t('other') %></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin:20px 0 70px">
+    <div class="col m6 s12">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <p>
+            <%= t('brief') %></p>
+        </div>
+        <div class="card-action center">
+          <a style="display:inline" href="<%= consultations_new_path %>" ><%= t('consult') %></a>
+          <a style="display:inline" href="mailto:behraaang@gmail.com?Subject=Anything%20on%20your%20mind"><%= t('contact') %></a>
+          <a style="display:inline" href="tel:+989123182609"><%= t('call') %></a>
+        </div>
+      </div>
+    </div>
+    <div class="col m6 s12">
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">mood</i><%= t('c_p') %></div>
+          <div class="collapsible-body"><span><%= t('c_p_desc') %></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">code</i><%= t('ror') %></div>
+          <div class="collapsible-body"><span><%= t('skills') %></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">code</i><%= t('eop') %></div>
+          <div class="collapsible-body"><span><%= t('skills') %></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">settings_system_daydream</i><%= t('dev') %></div>
+          <div class="collapsible-body"><span><%= t('dev_desc') %></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">tablet_mac</i><%= t('bak') %></div>
+          <div class="collapsible-body"><span><%= t('bak_desc') %></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">tablet_mac</i><%= t('react') %></div>
+          <div class="collapsible-body"><span><%= t('react_native') %></span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<ul id="slide-out" class="side-nav fixed">
+  <div class="card">
+    <h3 class="card-image center-align valign-wrapper" style="width:300px;height:205px">
+      <!--<img src="<%#= image_path('img-temp/400x270/img1.jpg') %>">-->
+      <!--<span class="card-title black-text text-darken-1">Behrang Mirzamani</span>-->
+      <%= t('name') %>    </h3>
+    <blockquote class="card-content">
+      <h5 class="header">
+        <%= t('slogan') %>
+      </h5>
+    </blockquote>
+    <div class="" style="padding:10px 3px 10px">
+      <div class="row">
+        <div class="col s2"></div>
+        <a style="margin:0;padding:0" class="col s3 hoverable center-align valign-wrapper" href="https://www.linkedin.com/in/behrang-mirzamani-ab2544101/">
+          <%= image_tag('linkedin.png', width: '100%') %>
+        </a>
+        <div class="col s2"></div>
+        <a style="margin:0;padding:0" class="col s3 hoverable center-align valign-wrapper" href="https://github.com/behraaang">
+          <%= image_tag 'gitlab.png', width: '100%' %>
+        </a>
+        <div class="col s2"></div>
+      </div>
+    </div>
+  </div>
+  <li><a class="waves-effect" href="<%= root_path %>"><i class="material-icons">perm_contact_calendar</i><%= t('about') %></a></li>
+  <li><a class="waves-effect" href="<%= posts_path %>"><i class="material-icons">local_library</i><%= t('blog') %></a></li>
+  <li><div class="divider"></div></li>
+  <li><a class="subheader"><%= t('more') %></a></li>
+  <li><a class="waves-effect" href="<%= projects_path %>"><i class="material-icons">view_module</i><%= t('projects') %></a></li>
+  <div class="row center-align" style="margin-top:40px">
+      <div class="col s2"></div>
+    <div class="col s4">
+      <%= link_to url_for(locale:'en') do %>
+          <%= image_tag('gb.png', class: 'circle responsive-img gb') %>
+      <% end %>
+    </div>
+
+    <div class="col s4">
+      <%= link_to url_for(locale:'fa') do %>
+          <%= image_tag('ir.png', class: 'circle responsive-img ir') %>
+      <% end %>
+    </div>
+
+
+      <div class="col s2"></div>
+  </div>
+</ul>

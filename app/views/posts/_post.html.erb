@@ -1,0 +1,24 @@
+<div class="parallax-container">
+  <% image = case post.category.name
+               when "life"
+                 '1.jpg'
+               when "soccer"
+                 'messi.jpg'
+               when "programming"
+                 'programming.gif'
+               when "other"
+                 'cs.png'
+             end
+  %>
+  <div class="parallax"><%= image_tag(image ,style: "display: block; transform: translate3d(-50%, 476px, 0px);") %></div>
+</div>
+<div class="section white">
+  <div class="row container">
+    <h4 class="header">
+      <%= I18n.locale == :fa ? post.fa_title : post.title %>
+    </h4>
+    <p class="grey-text text-darken-3 lighten-3">
+      <%= I18n.locale == :fa ? post.fa_content : post.content %>
+    </p>
+  </div>
+</div>

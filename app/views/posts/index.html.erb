@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo center"><%= t('blog') %></a>
+    <ul class="left hide-on-med-and-down">
+      <li><%= link_to t('life'), action: 'index', category: 'life' %></li>
+      <li><%= link_to t('programming'), action: 'index', category: 'programming' %></li>
+    </ul>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to t('soccer'), action: 'index', category: 'soccer' %></li>
+      <li><%= link_to t('other'), action: 'index', category: 'other' %></a></li>
+    </ul>
+  </div>
+</nav>
+<%= render @posts %>
+
